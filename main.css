@@ -58,7 +58,7 @@ header .logo {
 
 /* Cart Icon */
 .cart-icon {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 280px;
     background-color: #ff9900;
