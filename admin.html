@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Blog Management</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Admin Dashboard</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="#add-post">Add Blog Post</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blog Management Section -->
+    <section id="add-post" class="admin-section">
+        <h2>Add New Blog Post</h2>
+        <form id="blog-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+            
+            <label for="content">Content:</label>
+            <textarea id="content" rows="4" required></textarea>
+            
+            <label for="publish-date">Publish Date:</label>
+            <input type="datetime-local" id="publish-date" required>
+
+            <button type="submit">Schedule Post</button>
+        </form>
+        
+        <h3>Scheduled Posts</h3>
+        <ul id="scheduled-posts"></ul>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>

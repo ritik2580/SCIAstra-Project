@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cartItems"></div>
+    <h3>Total: ₹<span id="totalPrice">0</span></h3>
+    <button onclick="proceedToPayment()">Proceed to Payment</button>
+
+    <script>
+        // Display cart items
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemsDiv = document.getElementById('cartItems');
+        const totalPriceSpan = document.getElementById('totalPrice');
+        let totalPrice = 0;
+
+        cartItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item');
+            itemDiv.innerHTML = `<p>${item.name} - ₹${item.price}</p>`;
+            cartItemsDiv.appendChild(itemDiv);
+            totalPrice += parseFloat(item.price);
+        });
+
+        totalPriceSpan.textContent = totalPrice.toFixed(2);
+
+        // Function to proceed to payment
+        function proceedToPayment() {
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>

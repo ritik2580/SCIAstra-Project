@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Discounted Courses</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Course Catalog</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="admin.html">Admin Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" id="cart-icon">
+        🛒 <span id="cart-count">0</span>
+    </div>
+
+    <section id="courses" class="courses-section">
+        <h2>Discounted Courses</h2>
+        <div class="courses-container">
+            <div class="course-card" data-id="1" data-price="299">
+                <div class="course-image">
+                  
+                </div>
+                <h3>JavaScript Basics</h3>
+                <p>Learn the fundamentals of JavaScript.</p>
+                <span class="discount-badge">50% OFF</span>
+                <p class="course-price">₹299</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="course-card" data-id="2" data-price="499">
+                <div class="course-image">
+                   
+                </div>
+                <h3>Python for Beginners</h3>
+                <p>Learn Python from scratch and build real-world applications.</p>
+                <span class="discount-badge">40% OFF</span>
+                <p class="course-price">₹499</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="course-card" data-id="3" data-price="599">
+                <div class="course-image">
+                    
+                </div>
+                <h3>Web Development Essentials</h3>
+                <p>Master front-end and back-end development with this course.</p>
+                <span class="discount-badge">30% OFF</span>
+                <p class="course-price">₹599</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more courses here as needed -->
+        </div>
+        <button onclick="window.location.href='checkout.html'" class="checkout-button">Go to Checkout</button>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
